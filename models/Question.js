@@ -30,7 +30,7 @@ class Question{
   }
 
   static Find(id){
-    const sql = `SELECT * FROM questions WHERE id = ? LIMIT 1`
+    const sql = `SELECT * FROM questions WHERE id = ?`
     return new Promise(function(resolve){
       const question = new Question()
       resolve(question)
