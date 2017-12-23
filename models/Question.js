@@ -32,7 +32,7 @@ class Question{
   static Find(id){
     return new Promise(function(resolve){
       const question = new Question
-      resolve(`${Question.id}`)
+      resolve(`${question.id}`)
     })
   }
 }
