@@ -29,20 +29,9 @@ class Question{
     })
   }
 
-  static Question.Find(id){
+  static Find(id){
     
   }
-
 }
 
 module.exports = Question;
-
-
-// db.get(sql, [id], function(err, resultRow){
-//   console.log(`...found ${JSON.stringify(resultRow)}!`)
-//
-//   const user = new User(resultRow.name, resultRow.age)
-//   user.id = resultRow.id
-//
-//   resolve(user)
-// })
