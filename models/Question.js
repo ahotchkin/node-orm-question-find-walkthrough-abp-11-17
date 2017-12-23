@@ -31,7 +31,8 @@ class Question{
 
   static Find(id){
     return new Promise(function(resolve){
-      resolve(`${Question.id}`)
+      const question = new Question
+      resolve(question)
     })
   }
 }
