@@ -7,10 +7,10 @@ class Question{
         id INTEGER PRIMARY KEY,
         content TEXT
       )`
-      
+
       db.run(sql, function(){
         resolve("questions table created")
-      })      
+      })
     })
   }
 
@@ -19,16 +19,30 @@ class Question{
   }
 
   insert(){
-    const self = this 
+    const self = this
     const sql = `INSERT INTO questions (content) VALUES (?)`
     return new Promise(function(resolve){
       db.run(sql, [self.content], function(err, result){
         self.id = this.lastID
-        resolve(self)      
+        resolve(self)
       })
     })
+  }
+
+  static Question.Find(id){
+    
   }
 
 }
 
 module.exports = Question;
+
+
+// db.get(sql, [id], function(err, resultRow){
+//   console.log(`...found ${JSON.stringify(resultRow)}!`)
+//
+//   const user = new User(resultRow.name, resultRow.age)
+//   user.id = resultRow.id
+//
+//   resolve(user)
+// })
